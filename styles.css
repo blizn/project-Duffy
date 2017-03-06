@@ -1,0 +1,651 @@
+
+
+body {
+  background: #F5D0A9;
+  font-size: 16px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  margin: 0;
+}
+
+a {
+  font-family: 'Roboto', sans-serif;
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: green;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Diplomata SC', cursive; 
+  color: blue;
+  font-size: 60px;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  color: blue;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* Layout
+------------------------------------------*/
+
+header,
+footer {
+  margin: 0 auto;
+  width: 88%;
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  min-height: 200px;
+  display: flex;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background: transparent;
+}
+
+
+
+.wrapper {
+  padding-bottom: 1em;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+main {
+  width: 100%;
+  background: transparent;
+}
+
+.media {
+  min-height: 100px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  width: 22%;
+  flex-direction: column;
+}
+
+.gallery div {
+  background: rgba(0, 115, 230, 0.4);
+  width: 100%;
+  min-height: 300px;
+  padding: 1em;
+  border: 2px solid #eeeeee;
+  border-radius: 5em;
+}
+
+.image-banner {
+  width: 100%;
+  min-height: 300px;
+  max-height: 500px;
+}
+
+.middle {
+  min-height: 800px;
+  margin-right: 1em;
+  width: 100%;
+}
+
+.center-1,
+.center-2,
+.center-3 {
+  width: 80%;
+  margin: 1em 0;
+  display: flex;
+  margin-right: 1em;
+  justify-content: space-between;
+}
+
+.center-1 {
+  background: rgba(0, 115, 230, 0.4);
+  width: 70%;
+  margin-left: 100px;
+  align-items: left;
+  border: 2px solid #eeeeee;
+  border-radius: 5em;
+}
+
+.center-2 {
+  background: rgba(0, 115, 230, 0.4);
+  width: 70%;
+  margin-left: 450px;
+  align-items: right;
+  border: 2px solid #eeeeee;
+  border-radius: 5em;
+}
+
+.center-3 {
+  background: rgba(0, 115, 230, 0.4);
+  width: 70%;
+  margin-left: 100px;
+  align-items: left;
+  border: 2px solid #eeeeee;
+  border-radius: 5em;
+  overflow: hidden;
+}
+
+
+.media {
+  width: 30%;
+}
+
+.blurb {
+  width: 65%;
+}
+
+.gallery {
+  margin-left: 60%;
+}
+
+.gallery .donate {
+  margin-top: 1em;
+}
+
+
+/* Navigation
+------------------------------------------*/
+
+
+.sticky {
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.navMenu {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  z-index: 10;
+}
+
+nav ul {
+  font-size: 24;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-top: 1px solid #ffffff;
+  margin-bottom: 0;
+  max-height: 500px;
+  transition: max-height 1s;
+  overflow: hidden;
+  z-index: 10;
+}
+
+nav ul li a {
+  background: #cccccc;
+  padding: .5em 1em;
+  display: block;
+  text-align: center;
+  transition: 1s;
+  border-bottom: 1px solid #ffffff;
+}
+
+nav ul li a:hover {
+  background: #017d2d;
+  color: red;
+}
+
+.burger {
+  float: right;
+  background: url(images/burger.svg);
+  width: 32px;
+  height: 32px;
+  margin-right: 6%;
+}
+
+.burger span {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.hide-text {
+  overflow: hidden;
+  max-height: 0;
+}
+
+@media screen and (min-width:48em) {
+  .burger {
+    display: none;
+  }
+  .hide-text {
+    max-height: 500px;
+    overflow: inherit;
+  }
+  nav ul {
+    display: flex;
+    width: 88%;
+    max-width: 1080px;
+    margin: 0 auto;
+    border-top: 0;
+  }
+  nav ul li {
+    margin-right: .5em;
+  }
+  nav ul li a {
+    border-bottom: 0;
+  }
+}
+
+/* Site Map
+------------------------------------------*/
+
+/*footer .div .siteMap ul li {
+  display: flex;
+}*/
+
+/* Parallax
+------------------------------------------*/
+
+.parallax-1,
+.parallax-2,
+.parallax-3 {
+  height: 400px;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+
+.parallax-1 {
+  background-image: url(images/para-1.jpg);
+}
+
+.parallax-2 {
+  background-image: url(images/para-2.jpg);
+}
+
+.parallax-3 {
+  background-image: url(images/para-3.jpg);
+}
+
+/* Buttons
+------------------------------------------*/
+
+.donate {
+  font-size: 24px;
+  border: 2px solid #eeeeee;
+  background: linear-gradient(#ffffff, #cccccc);
+  outline: 0;
+  padding: 1em 2em;
+  border-radius: 16px;
+  text-shadow: 1px 1px 3px rgba(198, 198, 198, 0.9);
+  cursor: pointer;
+  align-items: center;
+  display: block;
+  text-align: center;
+  margin-left: 30%;
+}
+
+.print:hover {
+  background: linear-gradient(#cccccc, #ffffff);
+}
+
+
+/* social media.
+------------------------------------------*/
+
+.social-channels {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-channels li {
+  margin-right: .5em;
+}
+
+.social-channels li a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 3px;
+  transition: .2s;
+  /* Hide text */
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.social-channels li a:hover {
+  opacity: .7;
+}
+
+.facebook,
+.twitter,
+.youtube,
+.linkedin,
+.github,
+.flickr,
+.googleplus,
+.pinterest {
+  background: url(images/sprite.svg);
+}
+
+.facebook {
+  background-position: 0 0;
+}
+
+.twitter {
+  background-position: 0 -64px;
+}
+
+.youtube {
+  background-position: -32px -64px;
+}
+
+.github {
+  background-position: 0 -32px;
+}
+
+.linkedin {
+  background-position: -64px 0;
+}
+
+.flickr {
+  background-position: -32px 0;
+}
+
+.googleplus {
+  background-position: -32px -32px;
+}
+
+.pinterest {
+  background-position: -64px -32px;
+}
+
+
+/*! Flickity v1.2.1
+http://flickity.metafizzy.co
+---------------------------------------------- */
+
+.flickity-enabled {
+  position: relative;
+}
+
+.flickity-enabled:focus {
+  outline: none;
+}
+
+.flickity-viewport {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* draggable */
+
+.flickity-enabled.is-draggable {
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+
+/* ---- previous/next buttons ---- */
+
+.flickity-prev-next-button {
+  position: absolute;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  background: hsla(0, 0%, 100%, 0.75);
+  cursor: pointer;
+  /* vertically center */
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.flickity-prev-next-button:hover {
+  background: white;
+}
+
+.flickity-prev-next-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #09F;
+}
+
+.flickity-prev-next-button:active {
+  opacity: 0.6;
+}
+
+.flickity-prev-next-button.previous {
+  left: 10px;
+}
+
+.flickity-prev-next-button.next {
+  right: 10px;
+}
+
+
+/* right to left */
+
+.flickity-rtl .flickity-prev-next-button.previous {
+  left: auto;
+  right: 10px;
+}
+
+.flickity-rtl .flickity-prev-next-button.next {
+  right: auto;
+  left: 10px;
+}
+
+.flickity-prev-next-button:disabled {
+  opacity: 0.3;
+  cursor: auto;
+}
+
+.flickity-prev-next-button svg {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 60%;
+  height: 60%;
+}
+
+.flickity-prev-next-button .arrow {
+  fill: #333;
+}
+
+
+/* ---- page dots ---- */
+
+.flickity-page-dots {
+  position: absolute;
+  width: 100%;
+  bottom: -25px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 1;
+}
+
+.flickity-rtl .flickity-page-dots {
+  direction: rtl;
+}
+
+.flickity-page-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #333;
+  border-radius: 50%;
+  opacity: 0.25;
+  cursor: pointer;
+}
+
+.flickity-page-dots .dot.is-selected {
+  opacity: 1;
+}
+
+
+/* Flickity responsive
+------------------------------------------*/
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.flickity img {
+  margin: 0 auto;
+  display: block;
+}
+
+.flickity div {
+  width: 100%;
+}
+
+.flickity {
+  margin-bottom: 2em;
+  height: 100%;
+}
+
+
+/* Google map
+------------------------------------------*/
+
+#map-canvas {
+  height: 200px;
+  width: 100%;
+  display: block;
+}
+
+
+/* Contact Form Layout
+------------------------------------------*/
+
+.parallax-3 .gallery {
+  padding: 1em;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  font-size: .5em;
+  background: linear-gradient(#eeeeee, #ffffff);
+  border-top: 1px solid #cccccc;
+  border-left: 21x solid #cccccc;
+  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  padding: .5em;
+  margin-top: .25em;
+  margin-left: 33%;
+}
+
+input[type="submit"] {
+
+  font-size: .5em;
+  border: none;
+  background: linear-gradient(#ffffff, #eeeeee);
+  outline: 0;
+  padding: .5em 1em;
+  border-radius: 15px;
+  text-shadow: 1px 1px 3px rgba(198, 198, 198, 0.9);
+  border: 1px solid #eeeeee;
+  margin-top: .5em;
+  margin-left: 33%;
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(#eeeeee, #ffffff);
+  cursor: pointer;
+}
+
+
+/* Media-Quaries
+------------------------------------------*/
+
+@media screen and (max-width: 48em) {
+
+  h1 {
+    font-size: 30px
+  }
+
+    .gallery {
+    display: flex;
+    flex-direction: column;
+    width: 66%;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .donate {
+  font-size: 18px;
+}
+
+
+
+  .center-1,
+  .center-2,
+  .center-3 {
+    width: 80%;
+    margin: 1em 0;
+    display: flex;
+    margin-right: 1em;
+    justify-content: space-between;
+  }
+
+    p {
+    font-size: 14px;
+  }
+
+
+}
